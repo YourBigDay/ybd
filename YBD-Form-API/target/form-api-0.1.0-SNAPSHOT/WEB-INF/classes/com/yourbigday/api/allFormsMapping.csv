@@ -1,0 +1,30 @@
+HTML NAME,ELEMENT,INDEX,Template Name
+element_1,Template ID,20,currentTextTemplate
+element_31,Name,0,userDetailTemplate
+element_29,Email Address,1,userDetailTemplate
+element_30,Mobile No,2,userDetailTemplate
+element_2,Greeting Text,0,currentTextTemplate
+element_3,Parents Surname,1,currentTextTemplate
+element_4,Bride's First Name,3,currentTextTemplate
+imageelement_1,Bride's Pic,20,currentImageTemplate
+element_5,Groom's First Name,2,currentTextTemplate
+imageelement_2,Groom's Pic,21,currentImageTemplate
+element_8,Event 1 Title,4,currentTextTemplate
+element_9,Event 1 Date,5,currentTextTemplate
+element_10,Event 1 Time ,6,currentTextTemplate
+element_11,Event 1 Venue ,7,currentTextTemplate
+element_12,Event 1 Venue Address ,8,currentTextTemplate
+imageelement_3,Event 1 - Photograph ,22,currentImageTemplate
+element_14,Event 2 Title ,9,currentTextTemplate
+element_15,Event 2 Date ,10,currentTextTemplate
+element_16,Event 2Time ,11,currentTextTemplate
+element_17,Event 2 Venue ,12,currentTextTemplate
+element_18,Event 2 Venue Address ,13,currentTextTemplate
+imageelement_4,Event 2 - Photograph ,23,currentImageTemplate
+element_20,Event 3 Title ,14,currentTextTemplate
+element_21,Event 3 Date ,15,currentTextTemplate
+element_22,Event 3 Time ,16,currentTextTemplate
+element_23,Event 3 Venue ,17,currentTextTemplate
+element_24,Event 3 Venue Address ,18,currentTextTemplate
+imageelement_5,Event 3 - Photograph ,24,currentImageTemplate
+element_26,End Text ,19,currentTextTemplate
