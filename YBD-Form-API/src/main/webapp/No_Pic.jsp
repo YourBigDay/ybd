@@ -220,6 +220,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 		
 		//alert("ye hai" + document.getElementById("element_1").value);
 		var templateDef = {
+			"rosegold" : [2,3,6,7,13,19,25],
+			"shadicard" : [2,3,6,7,13,19,25,26],
 			"bollywood" : [2,3,6,7,13,19,25],
 			"southindian" : [2,3,6,7,13,19,25],
 			"brownethnic" : [3,6,7,13,19,25],
