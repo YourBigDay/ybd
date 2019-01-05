@@ -35,6 +35,7 @@ public class ManagerApplication {
 
 	final String rootPath = "/var/www/html/recieved_json/";
 	final String rootPathImages = "/var/www/html/recieved_images/";
+	final String rootPathImagesJSON = "C:\\Apache24\\htdocs\\recieved_images\\";
 
 	private static void emailSetupAndSend(final String emailBody) {
 		final String fromEmail = "helpline.ybd@gmail.com"; //requires valid gmail id
@@ -87,10 +88,12 @@ public class ManagerApplication {
 		
 		String uploadFileName = file.getOriginalFilename();
 		String extension = uploadFileName.substring(uploadFileName.lastIndexOf('.'));
-		String filePath = rootPathImages+ UUID.randomUUID().toString() + "." + extension;
+		String fileName = UUID.randomUUID().toString();
+		String filePath = rootPathImages+ fileName + "." + extension;
+		String filePathToSendBack = rootPathImagesJSON + fileName + "." + extension; 
 		try {
 			Files.copy(file.getInputStream(),Paths.get(filePath), StandardCopyOption.REPLACE_EXISTING);
-			return filePath;
+			return filePathToSendBack;
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
