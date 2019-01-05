@@ -33,8 +33,8 @@ import org.springframework.web.multipart.MultipartFile;
 @EnableAutoConfiguration
 public class ManagerApplication {
 
-	final String rootPath = "C:\\Apache24\\htdocs\\recieved_json\\";
-	final String rootPathImages = "C:\\Apache24\\htdocs\\recieved_images\\";
+	final String rootPath = "/var/www/html/recieved_json/";
+	final String rootPathImages = "/var/www/html/recieved_images/";
 
 	private static void emailSetupAndSend(final String emailBody) {
 		final String fromEmail = "helpline.ybd@gmail.com"; //requires valid gmail id

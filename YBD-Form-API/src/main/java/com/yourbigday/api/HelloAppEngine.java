@@ -189,7 +189,7 @@ public class HelloAppEngine extends HttpServlet {
 		final ObjectMapper mapper = new ObjectMapper();
 		final String stringyfiedJson = mapper.writeValueAsString(jsonToSave);
 
-		final String uri = "http://35.200.243.165/saveFinalJson";
+		final String uri = "http://35.200.221.241/manager/saveFinalJson";
 		final RestTemplate restTemplate = new RestTemplate();
 		final String result = restTemplate.postForObject(uri, stringyfiedJson, String.class);
 
@@ -197,7 +197,7 @@ public class HelloAppEngine extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		if ("Done".equalsIgnoreCase(result)) {
 			response.getWriter().print("Form submitted successfully! We will send you the sample shortly! Delivery time ranges between 30 minutes to 24 hours depending upon the demand. \r\n");
-			final String mailUri = "http://35.200.243.165/sendFormEmail";
+			final String mailUri = "http://35.200.221.241/manager/sendFormEmail";
 			final RestTemplate mailRestTemplate = new RestTemplate();
 			final String mailResult = mailRestTemplate.postForObject(mailUri, stringyfiedJson, String.class);
 			//response.sendRedirect("https://yourbigday.in");
@@ -221,7 +221,7 @@ public class HelloAppEngine extends HttpServlet {
 		MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
 		body.add("file", new FileSystemResource(fileToSend));
 		
-		String serverUrl = "http://35.200.243.165/uploadFile";
+		String serverUrl = "http://35.200.221.241/manager/uploadFile";
 		HttpEntity<MultiValueMap<String, Object>> requestEntity
 		 = new HttpEntity<>(body, headers);
 		
