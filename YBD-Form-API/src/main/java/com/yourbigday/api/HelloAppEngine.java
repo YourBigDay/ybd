@@ -62,7 +62,7 @@ public class HelloAppEngine extends HttpServlet {
 	private void parseCSVInFormMapping() {
 
 		try {
-			final InputStream csvToRead = HelloAppEngine.class.getResourceAsStream("allFormsMapping.csv");
+			final InputStream csvToRead = HelloAppEngine.class.getResourceAsStream("allFormsMapping2.csv");
 			final Reader csvReader = new InputStreamReader(csvToRead);
 			final CSVParser parser = CSVFormat.DEFAULT.withHeader("HTML NAME", "ELEMENT", "INDEX", "Template Name")
 					.parse(csvReader);
@@ -189,7 +189,7 @@ public class HelloAppEngine extends HttpServlet {
 		final ObjectMapper mapper = new ObjectMapper();
 		final String stringyfiedJson = mapper.writeValueAsString(jsonToSave);
 
-		final String uri = "http://35.200.221.241/manager/saveFinalJson";
+		final String uri = "http://35.244.38.246/manager/saveFinalJson";
 		final RestTemplate restTemplate = new RestTemplate();
 		final String result = restTemplate.postForObject(uri, stringyfiedJson, String.class);
 
@@ -197,7 +197,7 @@ public class HelloAppEngine extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		if ("Done".equalsIgnoreCase(result)) {
 			response.getWriter().print("Form submitted successfully! We will send you the sample shortly! Delivery time ranges between 30 minutes to 24 hours depending upon the demand. \r\n");
-			final String mailUri = "http://35.200.221.241/manager/sendFormEmail";
+			final String mailUri = "http://35.244.38.246/manager/sendFormEmail";
 			final RestTemplate mailRestTemplate = new RestTemplate();
 			final String mailResult = mailRestTemplate.postForObject(mailUri, stringyfiedJson, String.class);
 			//response.sendRedirect("https://yourbigday.in");
@@ -221,7 +221,7 @@ public class HelloAppEngine extends HttpServlet {
 		MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
 		body.add("file", new FileSystemResource(fileToSend));
 		
-		String serverUrl = "http://35.200.221.241/manager/uploadFile";
+		String serverUrl = "http://35.244.38.246/manager/uploadFile";
 		HttpEntity<MultiValueMap<String, Object>> requestEntity
 		 = new HttpEntity<>(body, headers);
 		
